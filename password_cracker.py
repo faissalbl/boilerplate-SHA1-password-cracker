@@ -11,7 +11,7 @@ def crack_sha1_hash(hash, use_salts = False):
                 res = execute_hash_comparison(hash, p)
             if (res):
                 return p
-    return False
+    return "PASSWORD NOT IN DATABASE"
 
 def execute_hash_comparison_with_salts(hash, password):
     with open('known-salts.txt') as known_salts_f:
